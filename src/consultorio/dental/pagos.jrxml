@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0a6ee602-e06c-42f4-9ce7-92d9085f6519">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="New Dataset 1" uuid="8b5fcd41-a171-46b9-aca2-110b55a068f1"/>
+	<subDataset name="pagos" uuid="6f0d5c75-b294-42a8-afa7-41000fcddff7">
+		<parameter name="id_paciente" class="java.lang.Integer"/>
+		<parameter name="fecha" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[select* from PAGO where ID_PACIENTE = $P{id_paciente}]]>
+		</queryString>
+		<field name="ID_PAGO" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="ID_PACIENTE" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="CANTIDAD" class="java.lang.Double">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="DIA_PAGO" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="MES_PAGO" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="ANO_PAGO" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<sortField name="fecha" type="Variable"/>
+		<variable name="suma" class="java.lang.Double" calculation="Sum">
+			<variableExpression><![CDATA[$F{CANTIDAD}]]></variableExpression>
+		</variable>
+		<variable name="fecha" class="java.util.Date">
+			<variableExpression><![CDATA[new Date($F{ANO_PAGO}-1900, $F{MES_PAGO}-1, $F{DIA_PAGO})]]></variableExpression>
+		</variable>
+	</subDataset>
+	<subDataset name="pagos_paciente" uuid="5bc0490c-e35f-451a-9051-8e1841e5d879">
+		<parameter name="id_paciente" class="java.lang.Integer"/>
+		<parameter name="costo_total" class="java.lang.Double"/>
+		<queryString>
+			<![CDATA[select * from pago,paciente where pago.id_paciente=paciente.idpaciente and id_paciente=$P{id_paciente}]]>
+		</queryString>
+		<field name="ID_PAGO" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="ID_PACIENTE" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="CANTIDAD" class="java.lang.Double">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="DIA_PAGO" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="MES_PAGO" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="ANO_PAGO" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="DESCRIPCION" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="IDPACIENTE" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="NOMBRE" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="DIRECCION" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="CIUDAD" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="FECHANAC" class="java.sql.Date">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="OCUPACION" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="TUTOR" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="MAIL" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="TELEFONO" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<sortField name="fecha" type="Variable"/>
+		<variable name="suma" class="java.lang.Double" calculation="Sum">
+			<variableExpression><![CDATA[$F{CANTIDAD}]]></variableExpression>
+			<initialValueExpression><![CDATA[0]]></initialValueExpression>
+		</variable>
+		<variable name="fecha" class="java.util.Date">
+			<variableExpression><![CDATA[new Date($F{ANO_PAGO}-1900, $F{MES_PAGO}-1, $F{DIA_PAGO})]]></variableExpression>
+		</variable>
+		<variable name="resta" class="java.lang.Double">
+			<variableExpression><![CDATA[$P{costo_total}-$V{suma}]]></variableExpression>
+		</variable>
+	</subDataset>
+	<parameter name="nombre" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="id_paciente" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="logo" class="java.io.InputStream">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from costo_tratamiento where id_paciente = $P{id_paciente}]]>
+	</queryString>
+	<field name="PAGO_INICIAL" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NUMERO_MENSUALIDADES" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="MONTO_MENSUALIDAD" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ID_PACIENTE" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="costo_total" class="java.lang.Double">
+		<variableExpression><![CDATA[$F{PAGO_INICIAL}+($F{NUMERO_MENSUALIDADES}*$F{MONTO_MENSUALIDAD})]]></variableExpression>
+	</variable>
+	<title>
+		<band height="116" splitType="Stretch">
+			<staticText>
+				<reportElement x="214" y="72" width="123" height="30" uuid="f7a324f4-e75f-4777-b479-28fdad4e7d81"/>
+				<textElement textAlignment="Center">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Pagos]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="529" height="58" uuid="17cd2623-5af3-4cd0-89b4-9bba0eb27bfe"/>
+				<imageExpression><![CDATA[System.getenv("ProgramFiles")+"\\Dental Software\\reportes\\logo_reporte.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<detail>
+		<band height="612" splitType="Stretch">
+			<staticText>
+				<reportElement x="13" y="16" width="58" height="20" uuid="01901be7-bf58-49b2-9214-9fca010199af"/>
+				<text><![CDATA[Paciente:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="84" y="16" width="295" height="20" uuid="2f659469-c42a-429b-9cf3-4a9637e626b6"/>
+				<textFieldExpression><![CDATA[$P{nombre}]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement key="table 2" style="table 2" x="0" y="149" width="555" height="80" uuid="5172b49d-25e2-4fc6-8701-fb6609ce47b7"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="pagos_paciente" uuid="ecc52ad2-0a70-44cc-847d-0e1ab877ed56">
+						<datasetParameter name="id_paciente">
+							<datasetParameterExpression><![CDATA[$P{id_paciente}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="costo_total">
+							<datasetParameterExpression><![CDATA[$V{costo_total}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="90" uuid="bcead878-1303-435f-a519-2fad6213dad6">
+						<jr:columnHeader style="table 2_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="75ae57d4-f62d-483c-bb53-849cbeb52955"/>
+								<text><![CDATA[Fecha]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 2_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="table 2_TD" height="30" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="a4560735-a4f6-4afa-aea9-d442f6611225"/>
+								<textFieldExpression><![CDATA[new SimpleDateFormat("dd/MMM/yyyy").format($V{fecha})]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="141" uuid="2f39c645-bbbb-451d-8903-75d50b423ee3">
+						<jr:columnHeader style="table 2_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="2bf07ab9-bae2-43ba-a152-74d3ab72a59a"/>
+								<text><![CDATA[Paciente]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 2_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="table 2_TD" height="30" rowSpan="1">
+							<textField>
+								<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="141" height="30" uuid="b74af96b-df99-44a8-a8e5-4de6d106d4c3"/>
+								<textFieldExpression><![CDATA[$F{NOMBRE}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="145" uuid="da4cfb9b-dfe6-4ede-bd72-0fbd8886fd4b">
+						<jr:columnHeader style="table 2_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="56a3597d-3fa3-4b2b-9c33-6e503e8811f4"/>
+								<text><![CDATA[Concepto]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 2_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="6b4cf920-5f07-4f90-8cc6-3e68224f3c01"/>
+								<text><![CDATA[Total]]></text>
+							</staticText>
+						</jr:columnFooter>
+						<jr:detailCell style="table 2_TD" height="30" rowSpan="1">
+							<textField>
+								<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="138" height="30" uuid="d66155dc-0dae-4143-b6d0-f4fa9a227775"/>
+								<textFieldExpression><![CDATA[$F{DESCRIPCION}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="92" uuid="936e8d46-777c-4f7f-97e3-95d855d7fb5d">
+						<jr:columnHeader style="table 2_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="0a99ccf2-d6f8-41a6-b84d-165a7b4ce146"/>
+								<text><![CDATA[Cantidad]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 2_CH" height="30" rowSpan="1">
+							<textField>
+								<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="90" height="30" uuid="68537194-0b20-4c4e-8bd0-eb62375d8924"/>
+								<textFieldExpression><![CDATA[$V{suma}]]></textFieldExpression>
+							</textField>
+						</jr:columnFooter>
+						<jr:detailCell style="table 2_TD" height="30" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="acc4dc15-fb89-4343-876e-a23831e47f07"/>
+								<textFieldExpression><![CDATA[$F{CANTIDAD}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="92" uuid="2f436358-1b32-47bb-82dc-1e304aed255a">
+						<jr:columnHeader height="30" rowSpan="1">
+							<rectangle>
+								<reportElement x="0" y="0" width="90" height="30" forecolor="#000000" backcolor="#BFE1FF" uuid="81cdc6fc-a770-49db-9e73-97ddc32d16dc"/>
+							</rectangle>
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="14" uuid="88455bed-86e7-4760-830f-834cdff3078d"/>
+								<text><![CDATA[Resta]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter height="30" rowSpan="1">
+							<rectangle>
+								<reportElement x="0" y="0" width="90" height="30" forecolor="#000000" backcolor="#BFE1FF" uuid="2a20dea4-c7b9-45c2-9e6a-d50103aa7773"/>
+							</rectangle>
+							<textField>
+								<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="90" height="17" uuid="7c250a1c-f526-43af-afab-78d8b03d8191"/>
+								<textFieldExpression><![CDATA[$V{resta}]]></textFieldExpression>
+							</textField>
+						</jr:columnFooter>
+						<jr:detailCell height="30" rowSpan="1">
+							<rectangle>
+								<reportElement x="0" y="0" width="90" height="30" uuid="404212e1-418d-4f98-bd14-eaf604cc4b88"/>
+							</rectangle>
+							<textField>
+								<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="90" height="15" uuid="f5974547-06f1-4e43-9bc4-56cfb96b8264"/>
+								<textFieldExpression><![CDATA[$V{resta}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement x="13" y="50" width="73" height="20" uuid="580c3289-0fe6-4db3-8ee1-80bd5903eec2"/>
+				<text><![CDATA[Pago inicial: $]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="86" y="50" width="100" height="20" uuid="f5132f67-8680-4d39-837c-3f47e0d76455"/>
+				<textFieldExpression><![CDATA[$F{PAGO_INICIAL}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="187" y="50" width="133" height="20" uuid="b69879b9-a2a6-427b-b2b1-30bc82498eeb"/>
+				<text><![CDATA[Número de mensualidades:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="320" y="50" width="100" height="20" uuid="2d494f5e-143b-415f-bef8-8a125a463c1e"/>
+				<textFieldExpression><![CDATA[$F{NUMERO_MENSUALIDADES}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="13" y="113" width="116" height="20" uuid="86a3c95e-cf4e-4124-90f1-d5ed3ac3395d"/>
+				<text><![CDATA[Costo del tratamiento: $]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="129" y="113" width="100" height="20" uuid="660399d9-f3b0-48e1-acb1-954d7dc8f897"/>
+				<textFieldExpression><![CDATA[$V{costo_total}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="13" y="81" width="128" height="20" uuid="cc21c2a8-4a05-45fa-a86b-68298331f9ae"/>
+				<text><![CDATA[Monto de mensualidad: $]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="141" y="81" width="100" height="20" uuid="d68d2f9a-1890-42ba-86f4-3aa76d2b1629"/>
+				<textFieldExpression><![CDATA[$F{MONTO_MENSUALIDAD}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

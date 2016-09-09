@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="pane" prefHeight="356.0" prefWidth="521.0" stylesheets="@estilo.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="consultorio.dental.EditarCitaController">
+   <children>
+      <Label layoutX="186.0" layoutY="38.0" text="Editar cita">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="182.0" layoutY="125.0" text="Fecha:" />
+      <Label layoutX="83.0" layoutY="173.0" text="Tratamiento de la sesión:" />
+      <DatePicker fx:id="datepicker_fecha" layoutX="241.0" layoutY="121.0" />
+      <TextField fx:id="textfield_tratamiento" layoutX="241.0" layoutY="168.0" prefHeight="27.0" prefWidth="176.0" />
+      <Button layoutX="190.0" layoutY="248.0" mnemonicParsing="false" onAction="#actionBotonGuardar" text="Aceptar" />
+      <Button layoutX="273.0" layoutY="248.0" mnemonicParsing="false" onAction="#actionBotonCancelar" text="Cancelar" />
+   </children>
+</AnchorPane>

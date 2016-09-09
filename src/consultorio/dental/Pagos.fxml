@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="519.0" prefWidth="1005.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="consultorio.dental.PagosController">
+   <children>
+      <Label layoutX="424.0" layoutY="47.0" text="Pagos" textFill="#214d74">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Button layoutX="390.0" layoutY="131.0" mnemonicParsing="false" onAction="#actionBotonHistorialPagosGeneral" text="Historial de pagos general" />
+      <Button layoutX="376.0" layoutY="192.0" mnemonicParsing="false" onAction="#actionBotonHistorialPagosPaciente" text="Historial de pagos por paciente" />
+      <Button layoutX="421.0" layoutY="247.0" mnemonicParsing="false" onAction="#actionBotonRegistrarPago" text="Registrar pago" />
+   </children>
+</AnchorPane>

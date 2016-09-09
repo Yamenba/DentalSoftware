@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Thu Jul 21 19:17:11 CDT 2016:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-0156-0ff6-7fd2-000000bb4a40 
+on database directory C:\Users\Ricardo\Google Drive\Proyecto Ceci\Consultorio\Consultorio Dental v2.6\DatosDentalSoftware with class loader sun.misc.Launcher$AppClassLoader@647e05 
+Loaded from file:/C:/Users/Ricardo/Google%20Drive/Proyecto%20Ceci/Consultorio/Consultorio%20Dental%20v2.6/dist/run1241456112/lib/derby-10.12.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_40-b25
+user.dir=C:\Users\Ricardo\Google Drive\Proyecto Ceci\Consultorio\Consultorio Dental v2.6
+os.name=Windows 8.1
+os.arch=x86
+os.version=6.3
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

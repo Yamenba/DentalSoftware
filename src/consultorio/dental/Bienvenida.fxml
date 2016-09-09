@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="201.0" prefWidth="304.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="consultorio.dental.BienvenidaController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="93.0" prefWidth="272.0" text="Bienvendo a Dental Software, para poder utilizar la función de recordatorio de citas por medio de correo electrónico es necesario que ingreses a tu cuenta de Google. ¿Deseas utilizar  esta funcionalidad? " wrapText="true" />
+      <Button layoutX="105.0" layoutY="131.0" mnemonicParsing="false" onAction="#actionBotonSi" text="Si" />
+      <Button layoutX="152.0" layoutY="131.0" mnemonicParsing="false" onAction="#actionBotonNo" text="No" />
+   </children>
+</AnchorPane>

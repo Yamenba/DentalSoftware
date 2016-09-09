@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="292.0" prefWidth="303.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="consultorio.dental.RegistraPagoController">
+    <stylesheets>
+        <URL value="@estilo.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="87.0" layoutY="23.0" text="Registrar pago">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="115.0" text="Cantidad:" />
+      <TextField fx:id="textfield_cantidad" layoutX="108.0" layoutY="110.0" prefHeight="27.0" prefWidth="177.0" />
+      <Label layoutX="22.0" layoutY="155.0" text="Fecha:" />
+      <DatePicker fx:id="fecha_pago_picker" layoutX="106.0" layoutY="150.0" prefHeight="27.0" prefWidth="177.0" />
+      <Button layoutX="122.0" layoutY="239.0" mnemonicParsing="false" onAction="#actionBotonGuardar" text="Guardar" />
+      <Label layoutX="22.0" layoutY="72.0" text="Paciente:" />
+      <ComboBox fx:id="combobox_paciente" layoutX="108.0" layoutY="68.0" prefHeight="25.0" prefWidth="177.0" />
+      <Label layoutX="29.0" layoutY="197.0" text="Descripción:" />
+      <TextField fx:id="textfield_descripcion" layoutX="109.0" layoutY="193.0" prefHeight="27.0" prefWidth="177.0" />
+   </children>
+</AnchorPane>

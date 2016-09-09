@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="pane" prefHeight="356.0" prefWidth="521.0" stylesheets="@estilo.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="consultorio.dental.ListaPagosController">
+   <children>
+      <Label layoutX="220.0" layoutY="21.0" text="Pagos">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tabla_pagos" layoutX="12.0" layoutY="101.0" prefHeight="178.0" prefWidth="497.0">
+        <columns>
+          <TableColumn fx:id="columna_fecha" prefWidth="95.0" text="Fecha" />
+          <TableColumn fx:id="columna_concepto" prefWidth="133.0" text="Concepto" />
+            <TableColumn fx:id="columna_cantidad" minWidth="5.0" prefWidth="115.0" text="Cantidad" />
+            <TableColumn fx:id="columna_editar" prefWidth="70.0" />
+            <TableColumn fx:id="columna_borrar" prefWidth="81.0" />
+        </columns>
+      </TableView>
+      <Button layoutX="231.0" layoutY="309.0" mnemonicParsing="false" onAction="#actionBotonAceptar" text="Aceptar" />
+      <Label fx:id="label_costo" layoutX="14.0" layoutY="75.0" text="Costo del tratamiento: -" />
+      <Label fx:id="label_restante" layoutX="208.0" layoutY="75.0" text="Cantidad restante: -" />
+      <Button layoutX="414.0" layoutY="62.0" mnemonicParsing="false" onAction="#actionBotonReporte" text="Reporte PDF" />
+   </children>
+</AnchorPane>

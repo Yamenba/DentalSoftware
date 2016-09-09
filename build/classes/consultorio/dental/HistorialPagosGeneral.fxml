@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="237.0" prefWidth="302.0" stylesheets="@estilo.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="consultorio.dental.HistorialPagosGeneralController">
+   <children>
+      <Label layoutX="36.0" layoutY="24.0" text="Historial de pagos general">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="84.0" text="Fecha inicio:" />
+      <Label layoutX="20.0" layoutY="119.0" text="Fecha fin:" />
+      <DatePicker fx:id="fecha_inicio_picker" layoutX="95.0" layoutY="80.0" />
+      <DatePicker fx:id="fecha_fin_picker" layoutX="95.0" layoutY="115.0" />
+      <Button layoutX="101.0" layoutY="166.0" mnemonicParsing="false" onAction="#actionBotonGenerar" text="Generar reporte" />
+   </children>
+</AnchorPane>

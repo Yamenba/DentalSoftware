@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="260.0" prefWidth="314.0" stylesheets="@estilo.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="consultorio.dental.RegistraPagoPacienteController">
+   <children>
+      <Label layoutX="65.0" layoutY="23.0" text="Registrar Pago">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="87.0" text="Cantidad:" />
+      <TextField fx:id="textfield_cantidad" layoutX="121.0" layoutY="87.0" />
+      <Button layoutX="106.0" layoutY="203.0" mnemonicParsing="false" onAction="#actionBotonGuardar" text="Guardar" />
+      <DatePicker fx:id="fecha_pago_picker" layoutX="120.0" layoutY="121.0" prefHeight="25.0" prefWidth="155.0" />
+      <Label layoutX="30.0" layoutY="121.0" text="Fecha:" />
+      <Label layoutX="33.0" layoutY="165.0" text="Descripción:" />
+      <TextField fx:id="textfield_descripcion" layoutX="121.0" layoutY="160.0" />
+   </children>
+</AnchorPane>

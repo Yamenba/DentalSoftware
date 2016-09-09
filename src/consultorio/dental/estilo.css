@@ -1,0 +1,161 @@
+.background {
+    -fx-background-color: #ffffff;
+}
+
+.button {
+    
+     -fx-background-color: #92c7d8;
+    -fx-text-fill: #214D74;
+    -fx-border-color:#214D74;
+    
+}
+
+
+
+
+.button:hover {
+    -fx-background-color: #b4e6f7;
+}
+
+.button:pressed {
+  -fx-background-color: #81b3c4;
+  
+}
+
+.toggle-button {
+    
+    -fx-background-color: #92c7d8;
+    -fx-text-fill: #214D74;
+    
+}
+.toggle-button:selected {
+    -fx-background-color: #abe3f6;
+}
+.toggle-button:hover {
+    -fx-background-color: #b4e6f7;
+}
+
+.table-view {
+    -fx-base: #91c9dc;
+    
+}
+
+.table-view .column-header .label {
+    
+    -fx-text-fill: #214D74;
+    
+}
+
+.list-view {
+    -fx-base: #91c9dc;
+    
+}
+
+.list-cell {
+    -fx-font-size: 13pt;
+     -fx-text-fill: #214D74;
+}
+
+.tab-pane {
+
+
+//-fx-background-color: #e7f3f8;
+-fx-text-fill: #214D74;
+-fx-border-color:#214D74;
+-fx-base: #A2E0F5;
+-fx-background-color: #e7f3f8;
+
+}
+
+
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: #92c7d8;
+}
+
+.tab{
+    -fx-background-color: #92c7d8;
+    -fx-border-color:#214D74;
+    
+}
+
+.tab .tab-label 
+{
+-fx-text-fill: #214D74; 
+}
+
+.tab:selected {
+-fx-border-color:#214D74;
+ 
+-fx-background-color: #abe3f6;
+}
+
+.tab-pane .scroll-pane{
+    -fx-background-color: #e7f3f8;
+}
+
+.choice-box{
+    -fx-base: #A2E0F5;
+    
+     
+}
+
+.choice-box .label {
+     -fx-text-fill: #214D74;
+}
+
+.scroll-pane{
+   -fx-background-color: #ffffff;
+  
+}
+
+    .combo-box 
+{
+   -fx-base: #A2E0F5;
+   -fx-text-fill: #214D74;
+   
+
+}
+
+.combo-box .cell{
+    -fx-text-fill: #214D74;
+    -fx-font-size: 9pt;
+}
+
+
+  
+.text-input {
+    -fx-text-fill: #214D74;
+    -fx-background-color: #ffffff;
+    -fx-border-color:#214D74;
+    
+}
+
+.text-area .content{
+      -fx-background-color: #ffffff;
+  }
+
+
+
+/*.date-picker-popup > .month-year-pane {
+    -fx-base: #A2E0F5;
+}*/
+
+.date-picker{
+    -fx-base: #A2E0F5;
+}
+
+.check-box{
+    -fx-base: #A2E0F5;
+    -fx-text-fill: #214D74;
+}
+
+.label{
+    -fx-text-fill: #214D74;
+}
+
+
+
+
+
+

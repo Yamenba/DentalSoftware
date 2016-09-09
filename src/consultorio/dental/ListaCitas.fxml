@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="pane" prefHeight="356.0" prefWidth="521.0" stylesheets="@estilo.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="consultorio.dental.ListaCitasController">
+   <children>
+      <Label layoutX="224.0" layoutY="24.0" text="Citas">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tabla_citas" layoutX="37.0" layoutY="102.0" prefHeight="200.0" prefWidth="448.0">
+        <columns>
+          <TableColumn fx:id="columna_fecha" prefWidth="83.0" text="Fecha" />
+            <TableColumn fx:id="columna_hora" prefWidth="84.0" text="Hora" />
+          <TableColumn fx:id="columna_tratamiento" prefWidth="158.0" text="Tratamiento de la sesión" />
+            <TableColumn fx:id="columna_editar" prefWidth="62.0" text="Editar" />
+            <TableColumn fx:id="columna_borrar" prefWidth="60.0" text="Borrar" />
+        </columns>
+      </TableView>
+      <Button layoutX="232.0" layoutY="315.0" mnemonicParsing="false" onAction="#actionBotonAceptar" text="Aceptar" />
+      <Button layoutX="400.0" layoutY="62.0" mnemonicParsing="false" onAction="#actionBotonReporte" text="Reporte PDF" />
+      <Label layoutX="37.0" layoutY="81.0" text="*Para cambiar la hora de las citas ir a la ventana de agenda" />
+   </children>
+</AnchorPane>

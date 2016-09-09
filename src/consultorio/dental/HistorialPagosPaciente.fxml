@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="204.0" prefWidth="303.0" stylesheets="@estilo.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="consultorio.dental.HistorialPagosPacienteController">
+   <children>
+      <Label layoutX="62.0" layoutY="24.0" text="Historial de pagos">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="94.0" text="Paciente:" />
+      <ComboBox fx:id="comboBox_paciente" layoutX="105.0" layoutY="90.0" prefWidth="150.0" />
+      <Button layoutX="126.0" layoutY="141.0" mnemonicParsing="false" onAction="#actionBotonAceptar" text="Aceptar" />
+   </children>
+</AnchorPane>

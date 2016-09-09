@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="pane" prefHeight="519.0" prefWidth="1005.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="consultorio.dental.PacientesController">
+   <children>
+      <ListView fx:id="listView_pacientes" layoutX="179.0" layoutY="45.0" prefHeight="370.0" prefWidth="476.0" />
+      <Button fx:id="boton_nuevo_paciente" layoutX="179.0" layoutY="432.0" mnemonicParsing="false" onAction="#actionBotonAgregarPaciente" text="Nuevo paciente">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="396.0" layoutY="16.0" text="Buscar paciente" textFill="#214d74">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="30.0" fitWidth="24.0" layoutX="372.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Search_user_interface_symbol_24.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="textfield_buscar" layoutX="503.0" layoutY="14.0" />
+   </children>
+</AnchorPane>

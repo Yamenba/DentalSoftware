@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="pane" prefHeight="519.0" prefWidth="1005.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="consultorio.dental.ConfiguracionController">
+   <children>
+      <Label layoutX="463.0" layoutY="59.0" text="Ajustes">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="333.0" layoutY="142.0" text="Recordatorios por email:" />
+      <ComboBox fx:id="comboBox_activado" layoutX="503.0" layoutY="138.0" prefWidth="150.0" />
+      <Label layoutX="430.0" layoutY="218.0" text="Título:" />
+      <TextField fx:id="textfield_titulo" layoutX="504.0" layoutY="214.0" prefHeight="25.0" prefWidth="228.0" />
+      <Label layoutX="398.0" layoutY="253.0" text="Descripción:" />
+      <TextArea fx:id="textArea_descripcion" layoutX="503.0" layoutY="253.0" prefHeight="99.0" prefWidth="228.0" />
+      <Button layoutX="463.0" layoutY="390.0" mnemonicParsing="false" onAction="#actionBotonGuardar" text="Guardar cambios" />
+      <Label layoutX="364.0" layoutY="180.0" text="Cuenta de Google:" />
+      <Label fx:id="label_correo" layoutX="504.0" layoutY="180.0" text="Cuenta de Google" />
+      <Button fx:id="boton" layoutX="670.0" layoutY="176.0" mnemonicParsing="false" onAction="#actionBotonCambiar" text="Cambiar" />
+   </children>
+</AnchorPane>

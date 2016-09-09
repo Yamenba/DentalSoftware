@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="1200.0" styleClass="background" stylesheets="@estilo.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="consultorio.dental.FXMLDocumentController">
+   <children>
+      <VBox prefHeight="650.0" prefWidth="1200.0">
+         <children>
+            <AnchorPane prefHeight="132.0" prefWidth="1200.0">
+               <children>
+                  <ImageView fx:id="image" fitHeight="146.0" fitWidth="317.0" layoutX="442.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@logo.png" />
+                     </image></ImageView>
+                  <AnchorPane fx:id="pane_izq_arriba" prefHeight="149.0" prefWidth="195.0">
+                     <children>
+                        <ToggleButton fx:id="boton_inicio" layoutX="16.0" layoutY="91.0" mnemonicParsing="false" onAction="#actionBotonInicio" prefHeight="44.0" prefWidth="163.0" text="Inicio">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </ToggleButton>
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="1067.0" layoutY="14.0" prefHeight="38.0" prefWidth="133.0" text="Ortodoncia" textFill="#214d74">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <HBox prefHeight="519.0" prefWidth="1200.0">
+               <children>
+                  <AnchorPane fx:id="izq_pane" prefHeight="501.0" prefWidth="198.0">
+                     <children>
+                        <ToggleButton fx:id="boton_pacientes" layoutX="14.0" layoutY="24.0" mnemonicParsing="false" onAction="#actionBotonPacientes" prefHeight="44.0" prefWidth="163.0" text="Pacientes">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </ToggleButton>
+                        <ToggleButton fx:id="boton_agenda" layoutX="14.0" layoutY="104.0" mnemonicParsing="false" onAction="#actionBotonAgenda" prefHeight="44.0" prefWidth="163.0" text="Citas">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </ToggleButton>
+                        <ToggleButton fx:id="boton_pagos" layoutX="15.0" layoutY="184.0" mnemonicParsing="false" onAction="#actionBotonPagos" prefHeight="44.0" prefWidth="163.0" text="Pagos">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </ToggleButton>
+                        <ToggleButton fx:id="boton_configuracion" layoutX="17.0" layoutY="263.0" mnemonicParsing="false" onAction="#actionBotonConfiguracion" prefHeight="44.0" prefWidth="163.0" text="Ajustes">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </ToggleButton>
+                        <Button layoutX="55.0" layoutY="460.0" mnemonicParsing="false" onAction="#actionBotonInformacion" text="Información" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="pane" prefHeight="519.0" prefWidth="1005.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
