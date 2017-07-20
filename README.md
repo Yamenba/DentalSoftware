@@ -1,2 +1,2 @@
-# Consultorio-Dental 
-Sistema de admnistración para consultorios de ortodoncia, desarrollado con JavaFX. Cuenta con módulo de historia clínica, control de pacientes, agenda, recordatorios para pacientes por medio de Google Calendar, modulo de pagos, reportes PDF, control de citas.
+# Dental Software
+Orthodontic practice management system. Developed with JavaFX.
